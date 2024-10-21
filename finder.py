@@ -7,7 +7,12 @@ import os
 # dark_society07
 
 def site():
-    os.system('clear')
+    if os.name == "nt":
+      os.system("cls")
+      print("")
+    elif os.name == "posix":
+      os.system("clear")
+        
     search = open("page.txt", 'r')
     url = input(Fore.LIGHTGREEN_EX+"""┌─[Dark-Society07~@HOME]
  └──╼ $  Entr URL :""")
